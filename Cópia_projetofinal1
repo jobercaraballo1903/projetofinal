@@ -1,0 +1,95 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/jobercaraballo1903/projetofinal/blob/main/C%C3%B3pia_projetofinal1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# saudação para o usuário\n",
+        "print(\"Seja bem-vindo(a) ao calculador de idades\")\n",
+        "\n",
+        "nome = input(\"Por favor, me diga seu nome: \")\n",
+        "\n",
+        "# Saudação junto com o nome\n",
+        "saudacao = f\"Obrigado, {nome}, vamos calcular sua idade\"\n",
+        "\n",
+        "print(saudacao)\n",
+        "\n",
+        "def calcular_idade():\n",
+        "    while True:\n",
+        "        try:\n",
+        "            # Solicitar ao usuário que insira seu ano de nascimento e ano atual\n",
+        "            ano_nascimento = int(input(\"Digite o seu ano de nascimento: \"))\n",
+        "\n",
+        "            # Solicitar o ano atual\n",
+        "            print(\"Para calcular sua idade, precisamos saber o ano atual.\")\n",
+        "            ano_atual = int(input(\"Digite o ano atual: \"))\n",
+        "\n",
+        "            # Calcular a idade\n",
+        "            idade = ano_atual - ano_nascimento\n",
+        "\n",
+        "            print(f\"Sua idade é aproximadamente {idade} anos.\")\n",
+        "\n",
+        "            # Verificar a categoria de idade usando if, elif e else\n",
+        "            if idade < 0:\n",
+        "                print(\"Digite um ano de nascimento válido!\")\n",
+        "            elif 0 <= idade <= 12:\n",
+        "                print(\"Que legal! Você é uma criança.\")\n",
+        "            elif 13 <= idade <= 19:\n",
+        "                print(\"Você é um adolescente, foi um prazer calcular sua idade.\")\n",
+        "            elif 20 <= idade <= 64:\n",
+        "                print(\"Você é um adulto, e com muita vida pela frente.\")\n",
+        "            else:\n",
+        "                print(\"Você é um idoso, obrigado por usar nosso programa.\")\n",
+        "\n",
+        "            break  # Sair do loop while se não houver erros\n",
+        "\n",
+        "        except ValueError:\n",
+        "            print(\"Erro: Digite um ano válido.\")\n",
+        "\n",
+        "if __name__ == \"__main__\":\n",
+        "    calcular_idade()"
+      ],
+      "metadata": {
+        "id": "HD7FLm4rh0La",
+        "outputId": "645b9471-1332-432d-9515-ca49171e7052",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "metadata": {
+            "tags": null
+          },
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Seja bem-vindo(a) ao calculador de idades\n"
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
